@@ -24,10 +24,10 @@ namespace Calculator
 
                 Console.WriteLine("Select Operation Symbole: ");
                 Console.WriteLine("\t+:Add , -:Substact , *:Multiply , /:Divide");
-             
 
+                string userChioce = Console.ReadLine();
 
-                switch (Console.ReadLine())
+                switch (userChioce)
                 {
                     case "+":
                         result = num1 + num2;
@@ -39,15 +39,20 @@ namespace Calculator
                         break;
                     case "*":
                         result = num1 * num2;
+
                         Console.WriteLine($"Your Result: {num1} * {num2} =" + result);
                         break;
                     case "/":
-                        if (num1 != 0 && num2 != 0 ) //added if here to recogoniae the 0 input
+                        
+                        if (num2 == 0)
                         {
-                            result = num1 / num2;
-                            Console.WriteLine($"Your Result: {num1} / {num2}= " + result);
+                            Console.WriteLine("Division with a Zero is not allowed");
                         }
-                        else Console.WriteLine("This was divided by zero");
+                        else
+                        {
+                            result = num1 / num2;   
+                            Console.WriteLine($"Your Result: {num1} / {num2} =" + result);
+                        }
                         break;
                     default:
                         Console.WriteLine("That was not valid option");
