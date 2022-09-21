@@ -4,26 +4,30 @@ using System.ComponentModel.DataAnnotations;
 using System.Text;
 using System.Threading.Tasks;
 
-
-
-double Addition(double num1, double num2)
+namespace Calculater
 {
+    class Program
+    { static void Main(string[] args)
+        { 
+        double Addition(double num1, double num2)
+        {
     return num1 + num2;
-}
-double Substract(double num1, double num2)
-{
+        }
+        double Substract(double num1, double num2)
+        {
     return (num1 - num2);   
-}
-double Multiply(double num1, double num2)
-{
+        }
+        double Multiply(double num1, double num2)
+        {
     return (num1 * num2);
-}
-double Divide(double num1, double num2)
-{
+        }
+        double Divide(double num1, double num2)
+            {
     return (num1 / num2);
-}
-do
-{
+            }
+       
+            do
+            {
 
 
 
@@ -47,7 +51,7 @@ do
             num1 = AskUserForNumber();
             num2 = AskUserForNumber();
 
-            result = Addition(num1, num2);
+            result =Addition(num1, num2);
             Console.WriteLine($"The Result : {num1} + {num2} = " + result); //the $ sign to directly include valid C# expression in side a string literal using braces like {expression
 
             break;
@@ -90,4 +94,7 @@ double AskUserForNumber()
     Console.WriteLine("Please Enter a number: ");
     num1 = Convert.ToDouble(Console.ReadLine());
     return num1;
+}
+}
+    }
 }
