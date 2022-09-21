@@ -19,39 +19,70 @@ namespace Calculator
 
                 Console.WriteLine("Please Enter The First number: ");
                 num1 = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine("Please Enter the Second number: ");
+                Console.WriteLine("Please Enter The Second number: ");
                 num2 = Convert.ToDouble(Console.ReadLine());
 
                 Console.WriteLine("Select Operation Symbole: ");
                 Console.WriteLine("\t+:Add , -:Substact , *:Multiply , /:Divide");
-
-                string userChioce = Console.ReadLine();
-
+                Console.WriteLine("\t- : SUBSTRACT");
+                Console.WriteLine("\t* : MULTIPLY");
+                Console.WriteLine("\t/ : DIVIDE");
                 switch (userChioce)
-                {
-                    case "+":
-                        result = num1 + num2;
+                Console.WriteLine("\t* : MULTIPLY");
+                Console.WriteLine("\t/ : DIVIDE");
+                switch (Console.ReadLine())
                         Console.WriteLine($"Your Result : {num1} + {num2} = " + result); //the $ sign to directly include valid C# expression in side a string literal using braces like {expression
-                        break;
-                    case "-":
-                        result = num1 - num2;
-                        Console.WriteLine($"Your Result: {num1} - {num2} = " + result);
-                        break;
-                    case "*":
-                        result = num1 * num2;
+                Console.WriteLine("\t/ : DIVIDE");
+                switch (Console.ReadLine())
+                        Console.WriteLine($"Your Result : {num1} + {num2} = " + result);
+                Console.WriteLine("\t/ : DIVIDE");
+                switch (Console.ReadLine())
+                        Console.WriteLine($"Your Result : {num1} + {num2} = " + result);
+                Console.WriteLine("\t/ : DIVIDE");
 
                         Console.WriteLine($"Your Result: {num1} * {num2} =" + result);
-                        break;
-                    case "/":
+                        Console.WriteLine($"Your Result : {num1} + {num2} = " + result);
+                Console.WriteLine("\t/ : DIVIDE");
                         
                         if (num2 == 0)
                         {
                             Console.WriteLine("Division with a Zero is not allowed");
                         }
                         else
-                        {
+                        Console.WriteLine($"Your Result : {num1} + {num2} = " + result); //the $ sign to directly include valid C# expression in side a string literal using braces like {expression
                             result = num1 / num2;   
                             Console.WriteLine($"Your Result: {num1} / {num2} =" + result);
+                        Console.WriteLine($"Your Result : {num1} + {num2} = " + result);
+                            result = num1 / num2;
+                            Console.WriteLine($"Your Result: {num1} / {num2}= " + result);
+                Console.WriteLine("\t/ : DIVIDE");
+                            result = num1 / num2;
+                            Console.WriteLine($"Your Result: {num1} / {num2}= " + result);
+                            Console.WriteLine("Division with a Zero is not allowed");
+                            result = num1 / num2;
+                            Console.WriteLine($"Your Result: {num1} / {num2}= " + result);
+            Console.ReadKey(); 
+            //to read the key press from the user
+                            result = num1 / num2;   
+                            Console.WriteLine($"Your Result: {num1} / {num2} =" + result);
+            Console.ReadKey();
+                            result = num1 / num2;
+                            Console.WriteLine($"Your Result: {num1} / {num2}= " + result);
+            Console.ReadKey();
+                        break;
+                    case "-":
+            Console.ReadKey();
+                        break;
+            Console.ReadKey(); 
+            //to read the key press from the user
+                        result = num1 * num2;
+                        Console.WriteLine($"Your Result: {num1} * {num2} =" + result);
+            Console.ReadKey();
+                    case "/":
+                        if (num1 != 0 && num2 != 0 )
+                        {
+                            result = num1 / num2;
+                            Console.WriteLine($"Your Result: {num1} / {num2}= " + result);
                         }
                         break;
                     default:
@@ -61,8 +92,7 @@ namespace Calculator
                 Console.WriteLine("Should we continue!(Press Y for Yes and N for No): ");
             }while(Console.ReadLine().ToUpper() == "Y"); // the check condition for the loop
             Console.WriteLine("See You again!");
-            Console.ReadKey(); 
-            //to read the key press from the user
+            Console.ReadKey();
         }
     }
 }
