@@ -31,22 +31,22 @@ namespace Calculator
                 {
                     case "+":
                         result = num1 + num2;
-                        Console.WriteLine($"Your Result : {num1} + {num2} = " + result); //the $ sign to directly include valid C# expression in side a string literal using braces like {expression
+                        Console.WriteLine($"The Result : {num1} + {num2} = " + result); //the $ sign to directly include valid C# expression in side a string literal using braces like {expression
 
                         break;
                     case "-":
                         result = num1 - num2;
-                        Console.WriteLine($"Your Result: {num1} - {num2} = " + result);
+                        Console.WriteLine($"The Result: {num1} - {num2} = " + result);
                         break;
                     case "*":
                         result = num1 * num2;
-                        Console.WriteLine($"Your Result: {num1} * {num2} =" + result);
+                        Console.WriteLine($"The Result: {num1} * {num2} =" + result);
                         break;
                     case "/":
                         if (num1 != 0 && num2 != 0 ) //added if here to recogoniz the 0 input
                         {
                             result = num1 / num2;
-                            Console.WriteLine($"Your Result: {num1} / {num2}= " + result);
+                            Console.WriteLine($"The Result: {num1} / {num2}= " + result);
                         }
                         else Console.WriteLine("This was divided by zero");
                         break;
