@@ -1,33 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Calculater
+﻿
+static double Addition(double num1, double num2)
 {
-    class Program
-    { static void Main(string[] args)
-        { 
-        double Addition(double num1, double num2)
-        {
     return num1 + num2;
-        }
-        double Substract(double num1, double num2)
-        {
-    return (num1 - num2);   
-        }
-        double Multiply(double num1, double num2)
-        {
+}
+static double Substract(double num1, double num2)
+{
+    return (num1 - num2);
+}
+static double Multiply(double num1, double num2)
+{
     return (num1 * num2);
-        }
-        double Divide(double num1, double num2)
-            {
+}
+static double Divide(double num1, double num2)
+{
     return (num1 / num2);
-            }
-       
-            do
-            {
+}
+
+
+
+do
+{
 
 
 
@@ -51,7 +43,7 @@ namespace Calculater
             num1 = AskUserForNumber();
             num2 = AskUserForNumber();
 
-            result =Addition(num1, num2);
+            result = Addition(num1, num2);
             Console.WriteLine($"The Result : {num1} + {num2} = " + result); //the $ sign to directly include valid C# expression in side a string literal using braces like {expression
 
             break;
@@ -74,7 +66,7 @@ namespace Calculater
             num2 = AskUserForNumber();
             if (num2 != 0) //added if here to recogoniz the 0 input
             {
-                result =Divide(num1, num2);
+                result = Divide(num1, num2);
                 Console.WriteLine($"The Result: {num1} / {num2}= " + result);
             }
             else Console.WriteLine("Can not be divided!");
@@ -94,7 +86,4 @@ double AskUserForNumber()
     Console.WriteLine("Please Enter a number: ");
     num1 = Convert.ToDouble(Console.ReadLine());
     return num1;
-}
-}
-    }
 }
